@@ -25,11 +25,11 @@ public class TopJob implements Job {
 		File file = new File("top.txt");
 		try (BufferedWriter bw = new BufferedWriter( new FileWriter(file))) {    // try-catch resource => close() 생략 가능
 			for(MemberDTO member : list) {
-				bw.write("회원번호 :" + member.getNo()+" \n");
-				bw.write("회원아이디 :" +member.getId()+" \n");
-				bw.write("회원명 :" +member.getName()+" \n");
-				bw.write("회원등급 :" +member.getGrade()+" \n");
-				bw.write("회원포인트 :" +member.getPoint()+"");
+				bw.write("회원번호 : " + member.getNo()+" \n");
+				bw.write("회원아이디 : " +member.getId()+" \n");
+				bw.write("회원명 : " +member.getName()+" \n");
+				bw.write("회원등급 : " +member.getGrade()+" \n");
+				bw.write("회원포인트 : " +member.getPoint()+"");
 			}
 			System.out.println("top.txt 파일생성완료");
 		} catch (IOException e) {

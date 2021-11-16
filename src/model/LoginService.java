@@ -28,7 +28,7 @@ public class LoginService implements MemberService {
 		// 있으면 세션저장하고 이동
 		if (mem != null) {
 			request.getSession().setAttribute("member", mem);
-			mav = new ModelAndView("views/manager.jsp", false);
+			mav = new ModelAndView("views/manager.jsp", false);  //이동
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");

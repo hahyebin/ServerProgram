@@ -7,10 +7,28 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script>
-
-
-</script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}	
+	#container {
+		width: 300px;
+		margin: 50px auto;	
+	}
+	h4 { text-align:center; }
+	form{
+		width: 200px;
+		margin: 10px auto;	
+		text-align:center;
+	}
+	button {
+		display :inline-block;
+		margin-top: 8px;
+		margin-right:5px;
+	}
+</style>
 
 
 </head>
