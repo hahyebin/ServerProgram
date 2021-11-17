@@ -29,18 +29,16 @@
 		margin-right:5px;
 	}
 </style>
-
-
 </head>
 <body>
 	<div id="container">
-		<h4>회원관리 프로그램</h4>
-	${list.id}
-		<form action="/ServerProgram/login.do">
+		<h4>회원 관리 프로그램</h4>
+
+		<form action="/ServerProgram/login.do" method="post">
 			<input type="text" name="id" placeholder="아이디" id="id"><br>
 			<input type="text" name="name" placeholder="이름" id="name"><br>
 			<button>로그인</button>		
-			<a href="/ServerProgram/views/join.jsp">회원가입</a>
+			<a href="/ServerProgram/joinPage.do">회원가입</a>    <!--  수정   CONTROLLER이용하기 ... JSP NO  -->
 		</form>
 	
 	

@@ -64,12 +64,11 @@
 		margin-top: 8px;
 		margin-right:5px;
 	}
-
 	</style>
 </head>
 <body>
-	<h3>회원관리시스템</h3>
-	<a href="/ServerProgram/logout.do?id=${member.id}&name=${member.name}">로그아웃</a> <!--  세션삭제.. -->
+	<h3>회원 관리 시스템</h3>
+	<a href="/ServerProgram/logout.do">로그아웃</a> <!--  세션삭제.. -->
 	<hr>
 	<form action="/ServerProgram/update.do" method="post" id="f1">
 		<table id="t1">
@@ -83,12 +82,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" name="id" value="${member.id}" readonly class="input">
-						<input type="hidden" name="no" value="${member.no}" id="no">
+					<td><input type="text" name="id" value="${user.id}" readonly class="input">
 					</td>
-					<td><input type="text" name="name" value="${member.name}"  id="name"></td>
-					<td><input type="text" name="grade" value="${member.grade}" readonly  class="input"></td>
-					<td><input type="text" name="point" value="${member.point}" id="point"></td>
+					<td><input type="text" name="name" value="${user.name}"  id="name"></td>
+					<td><input type="text" name="grade" value="${user.grade}" readonly  class="input"></td>
+					<td><input type="text" name="point" value="${user.point}" id="point"></td>
 				</tr>
 			</tbody>
 			<tfoot>

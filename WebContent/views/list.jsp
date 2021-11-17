@@ -24,7 +24,6 @@
 				</tr>
 			</thead>
 			<tbody>
-			
 				<c:forEach var="list" items="${list}">
 					<tr>
 						<td>${list.no}</td>

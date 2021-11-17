@@ -52,6 +52,9 @@ public class MemberController extends HttpServlet {
 		case "logout.do":                 // 로그아웃 서비스
 			service = new LogoutService();
 			break;
+		case "joinPage.do": 			 // 회원가입 폼 서비스
+			mav = new ModelAndView("views/join.jsp", false);
+			break;				
 		case "join.do":                   // 회원가입 서비스
 			service = new JoinService();
 			break;

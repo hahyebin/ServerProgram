@@ -20,14 +20,15 @@ public class LoginService implements MemberService {
 		MemberDTO member = new MemberDTO();
 		member.setId(id);
 		member.setName(name);
-		
+	
 		ModelAndView mav = null;
+		
 		// 테이블에서 갖고오기
-		MemberDTO mem = MemberDAO.getInstance().select(member);
+		MemberDTO user = MemberDAO.getInstance().select(member);
 		
 		// 있으면 세션저장하고 이동
-		if (mem != null) {
-			request.getSession().setAttribute("member", mem);
+		if (user != null) {
+			request.getSession().setAttribute("user", user);
 			mav = new ModelAndView("views/manager.jsp", false);  //이동
 		} else {
 			PrintWriter out = response.getWriter();

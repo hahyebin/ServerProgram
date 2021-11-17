@@ -26,16 +26,17 @@ public class JoinService implements MemberService {
 		PrintWriter out = response.getWriter();
 		if( result > 0 ) {
 			out.println("<h1>가입되었습니다.</h1>");
-			out.println("<a href='/ServerProgram/loginPage.do?id='"+id+"&name="+name+">로그인</a>");
+			out.println("<a href='/ServerProgram/loginPage.do'>로그인</a>");
 			out.close();
-		} 
-		// 가입 추ㅣ소 없음
-		
-		
-		
-		
-		
-		
+		} else {
+			out.println("<script>");
+			out.println("alert('가입실패')");
+			out.println("history.back()");
+			out.println("</script>");		
+			out.close();
+			
+		}
+
 		return null;
 	}
 

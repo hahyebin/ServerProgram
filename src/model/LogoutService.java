@@ -13,17 +13,16 @@ public class LogoutService implements MemberService {
 
 		HttpSession session = request.getSession();
 
-		String id = request.getParameter("id");
-		String name = request.getParameter("name");
 
-		// 세션삭제
-		 session.removeAttribute(name);
-	     session.removeAttribute(id);
-			
-		
-		
-		// 로그아웃하면 list.do 응답하는 index로 이동..
-		return new ModelAndView("index.jsp",false);
+	     
+	     // 수정
+	     // ★★★★★★★세션 저장을 객체로 했기 때문에 삭제는 id랑 name만 할게 아니라! 전부하기★★★★★★★★★★★★★★★★★★★★★★★★★ 
+	     session.invalidate(); 
+	     
+	     
+	     
+		// 다시 로그인하러가기
+		return new ModelAndView("views/login.jsp",false);
 	}
 
 }

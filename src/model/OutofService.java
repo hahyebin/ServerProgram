@@ -14,8 +14,10 @@ public class OutofService implements MemberService {
 	@Override
 	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
+	
+		// 데이터를 직접적으로 넘겨서 받는것보다 세션에 저장된 넘을 갖고 오기
 		Optional<String> optNo = Optional.ofNullable(request.getParameter("no"));
-		int no = Integer.parseInt(optNo.orElse("0"));
+	    int no = Integer.parseInt(optNo.orElse("0"));
 		
 		int result = MemberDAO.getInstance().delete(no);
 		
@@ -25,7 +27,7 @@ public class OutofService implements MemberService {
 			out.println("<a href='/ServerProgram/views/join.jsp'>회원가입</a>");
 			out.close();
 		} else {
-			out.println("<script>ㅇㅇ</script>");
+			out.println("<script></script>");
 			out.close();
 		}
 		

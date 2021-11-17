@@ -75,9 +75,4 @@ public class MemberDAO {
 	
 	
 	
-	
-	
-	
-	
-	
 } // end of class
